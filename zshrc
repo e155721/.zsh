@@ -44,8 +44,19 @@ bindkey -e
 # Default PROMPT configuration
 #
 autoload -U colors && colors
-PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}
+autoload -Uz add-zsh-hook
+function branch_name() {
+    if [ -e .git ]
+    then
+        branch=`git branch | grep \*`
+        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b (${branch}) %{$fg[green]%}
 %(!.#.💕 ) %"
+    else
+        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}
+%(!.#.💕 ) %"
+    fi
+}
+add-zsh-hook precmd branch_name
 
 # SPROMPT Configuration
 #
