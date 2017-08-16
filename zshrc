@@ -16,16 +16,11 @@ p=pgp.nic.ad.jp
 
 ## Include dependence configuration
 #
-e=(`ls ~/.zsh_*`)
-if [ ${#e[*]} -ne 0 ]
-then
-    i=1
-    while [ $i -le ${#e[*]} ]
-    do
-        source $e[$i]
-        i=$((i+1))
-    done
-fi
+zfile=(`ls ~/.zsh_*`)
+for z in $zfile
+do
+    source $z
+done
 
 ## auto change directory
 #
