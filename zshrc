@@ -16,11 +16,17 @@ p=pgp.nic.ad.jp
 
 ## Include dependence configuration
 #
+# .zsh_* file.
+#
 zfile=(`ls ~/.zsh_*`)
 for z in $zfile
 do
     source $z
 done
+
+# zprompt
+#
+source ~/.zsh/zprompt
 
 ## auto change directory
 #
@@ -33,29 +39,6 @@ setopt correct
 ## Emacs like key bind
 #
 bindkey -e
-
-## PROMPT configuration
-#
-# Default PROMPT configuration
-#
-autoload -U colors && colors
-autoload -Uz add-zsh-hook
-function branch_name() {
-    if [ -e .git ]
-    then
-        branch=`git branch | grep \*`
-        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b (${branch}) %{$fg[green]%}
-%(!.#.💕 ) %"
-    else
-        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}
-%(!.#.💕 ) %"
-    fi
-}
-add-zsh-hook precmd branch_name
-
-# SPROMPT Configuration
-#
-SPROMPT="%r is correct? [n,y,a,e]: "
 
 ## Completion configuration
 #
