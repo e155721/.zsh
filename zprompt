@@ -25,15 +25,17 @@ function prompt() {
     fi
 }
 
+P1="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}"
+P2="
+%(!.#.${default}) %"
+
 function branch_name() {
     if [ -e .git ]
     then
         branch=`git branch | grep \*`
-        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b (${branch}) %{$fg[green]%}
-%(!.#.${default}) %"
+        PROMPT="$P1 (${branch}) ${P2}"
     else
-        PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}
-%(!.#.${default}) %"
+        PROMPT="${P1} ${P2}"
     fi
 }
 add-zsh-hook precmd branch_name
