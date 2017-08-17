@@ -1,22 +1,8 @@
 ### zshrc ###
 
-## Environment variable
-#
-env=`uname`
-
-## Variable configuration
-#
-# w3m variable
-#
-g=google.com
-
-# gpg valriable
-#
-p=pgp.nic.ad.jp
-
 ## Include dependence configuration
 #
-# .zsh_* file.
+# Include .zsh_* file.
 #
 zfile=(`ls ~/.zsh_*`)
 for z in $zfile
@@ -24,7 +10,7 @@ do
     source $z
 done
 
-# zprompt
+# Include zprompt
 #
 source ~/.zsh/zprompt
 
@@ -65,10 +51,21 @@ setopt hist_ignore_all_dups
 #
 setopt share_history
 
+## Variable configuration
+#
+# w3m variable
+#
+g=google.com
+
+# gpg valriable
+#
+p=pgp.nic.ad.jp
+
 ## Alias configuration
 #
 # ls
 #
+env=`uname`
 if [ $env = "Darwin" ]
 then
     alias ls='ls -G'
