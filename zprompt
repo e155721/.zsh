@@ -33,7 +33,7 @@ function branch_name() {
     if [ -e .git ]
     then
         branch=`git branch | grep \*`
-        PROMPT="$P1 (${branch}) ${P2}"
+        PROMPT="${P1}(${branch}) ${P2}"
     else
         PROMPT="${P1} ${P2}"
     fi
