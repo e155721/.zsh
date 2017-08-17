@@ -17,7 +17,7 @@ function prompt() {
     prompt=$1
     if [ -n "$prompt" ]
     then
-        echo "${prompt}" > $promptFile
+        echo $prompt > $promptFile
         source ~/.zsh/zshrc
     else
         rm -f $promptFile
