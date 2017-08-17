@@ -1,9 +1,5 @@
 ### zshrc ###
 
-## Environment variable
-#
-env=`uname`
-
 ## Variable configuration
 #
 # w3m variable
@@ -69,6 +65,7 @@ setopt share_history
 #
 # ls
 #
+env=`uname`
 if [ $env = "Darwin" ]
 then
     alias ls='ls -G'
