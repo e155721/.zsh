@@ -1,3 +1,5 @@
+### zprompt ###
+
 ## PROMPT configuration
 #
 # Default PROMPT configuration
@@ -47,3 +49,8 @@ add-zsh-hook precmd branch_name
 # SPROMPT Configuration
 #
 SPROMPT="%r is correct? [n,y,a,e]: "
+
+function reload() {
+    source $ZDOTDIR/zprofile
+    source $ZDOTDIR/zshrc
+}

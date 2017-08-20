@@ -22,7 +22,7 @@ done
 
 # zprompt
 #
-source ~/.zsh/zprompt
+source $ZDOTDIR/zprompt
 
 ## auto change directory
 #
@@ -85,13 +85,16 @@ alias links='links duckduckgo.com'
 
 # Git
 #
+alias gs='git status'
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
 alias gch='git checkout'
 
-# source
+## Function
+#
+# reload
 #
 function reload() {
     source $ZDOTDIR/zprofile

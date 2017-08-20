@@ -1,4 +1,4 @@
-### .zprofile ###
+### zprofile ###
 
 ## ZSH path
 #
