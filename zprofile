@@ -1,11 +1,8 @@
 ### .zprofile ###
 
-## ssh configuration
+## ZSH path
 #
-# Add ssh key passphrase
-#
-#ssh-add -A 2> ~/.ssh-tmp
-#rm ~/.ssh-tmp
+export ZDOTDIR=~/.zsh/
 
 ## Set language
 #
@@ -15,8 +12,15 @@ export LANG=ja_JP.UTF-8
 
 ## Include dependence configuration
 #
-local='.zprofile'
+local='.zprofile_local'
 if [ -e $local ]
 then
     source ~/$local
 fi
+
+## ssh configuration
+#
+# Add ssh key passphrase
+#
+#ssh-add -A 2> ~/.ssh-tmp
+#rm ~/.ssh-tmp
