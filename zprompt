@@ -20,10 +20,10 @@ function prompt() {
     if [ -n "$prompt" ]
     then
         echo $prompt > $promptFile
-        source ~/.zsh/zshrc
+        exec ~/.zsh/zshrc
     else
         rm -f $promptFile
-        source ~/.zsh/zshrc
+        exec ~/.zsh/zshrc
     fi
 }
 
@@ -49,8 +49,3 @@ add-zsh-hook precmd branch_name
 # SPROMPT Configuration
 #
 SPROMPT="%r is correct? [n,y,a,e]: "
-
-function reload() {
-    source $ZDOTDIR/zprofile
-    source $ZDOTDIR/zshrc
-}

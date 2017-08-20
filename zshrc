@@ -17,12 +17,12 @@ p=pgp.nic.ad.jp
 zfile=(`ls ~/.zsh_*`)
 for z in $zfile
 do
-    source $z
+    exec $z
 done
 
 # zprompt
 #
-source $ZDOTDIR/zprompt
+exec $ZDOTDIR/zprompt
 
 ## auto change directory
 #
@@ -97,6 +97,6 @@ alias gch='git checkout'
 # reload
 #
 function reload() {
-    source $ZDOTDIR/zprofile
-    source $ZDOTDIR/zshrc
+    exec $ZDOTDIR/zprofile
+    exec $ZDOTDIR/zshrc
 }
