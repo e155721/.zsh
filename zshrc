@@ -2,10 +2,6 @@
 
 ## Variable configuration
 #
-# w3m variable
-#
-g=google.com
-
 # gpg valriable
 #
 p=pgp.nic.ad.jp
@@ -48,10 +44,6 @@ compinit
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
-
-# ignore duplication command history list
-#
-setopt hist_ignore_dups
 
 # Delete is overlap and old command data
 #
