@@ -90,3 +90,10 @@ alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
 alias gch='git checkout'
+
+# source
+#
+function reload() {
+    source $ZDOTDIR/zprofile
+    source $ZDOTDIR/zshrc
+}
