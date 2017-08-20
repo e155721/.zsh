@@ -33,6 +33,10 @@ function branch_name() {
     if [ -e .git ]
     then
         branch=`git branch | grep \*`
+        if [ -z "$branch" ]
+        then
+            branch='No-Branches'
+        fi
         PROMPT="${P1}(${branch}) ${P2}"
     else
         PROMPT="${P1} ${P2}"
