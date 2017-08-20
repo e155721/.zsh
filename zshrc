@@ -79,10 +79,6 @@ alias ll='ls -l'
 #
 alias cl='emacsclient'
 
-# Links
-#
-alias links='links duckduckgo.com'
-
 # Git
 #
 alias gs='git status'
