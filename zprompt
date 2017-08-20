@@ -20,10 +20,10 @@ function prompt() {
     if [ -n "$prompt" ]
     then
         echo $prompt > $promptFile
-        exec ~/.zsh/zshrc
+        source ~/.zsh/zshrc
     else
         rm -f $promptFile
-        exec ~/.zsh/zshrc
+        source ~/.zsh/zshrc
     fi
 }
 

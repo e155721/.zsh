@@ -2,7 +2,7 @@
 
 ## ZSH path
 #
-export ZDOTDIR=~/.zsh/
+export ZDOTDIR=~/.zsh
 
 ## Set language
 #
