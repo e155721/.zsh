@@ -83,7 +83,6 @@ alias cl='emacsclient'
 #
 alias links='links duckduckgo.com'
 
-
 # Git
 #
 alias gs='git status'
