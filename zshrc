@@ -82,3 +82,11 @@ alias cl='emacsclient'
 # Links
 #
 alias links='links duckduckgo.com'
+
+# Git
+#
+alias gi='git init'
+alias ga='git add'
+alias gc='git commit'
+alias gb='git branch'
+alias gch='git checkout'
