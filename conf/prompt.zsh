@@ -15,18 +15,6 @@ else
     default='💕 '
 fi
 
-function prompt() {
-    prompt=$1
-    if [ -n "$prompt" ]
-    then
-        echo $prompt > $promptFile
-        source ~/.zsh/zshrc
-    else
-        rm -f $promptFile
-        source ~/.zsh/zshrc
-    fi
-}
-
 P1="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}"
 P2="
 %(!.#.${default}) %"
