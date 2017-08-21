@@ -15,10 +15,3 @@ function prompt() {
         source ~/.zsh/zshrc
     fi
 }
-
-# reload
-#
-function reload() {
-    source $ZDOTDIR/zprofile
-    source $ZDOTDIR/zshrc
-}
