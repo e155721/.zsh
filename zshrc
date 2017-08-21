@@ -1,10 +1,14 @@
 ### zshrc ###
 
-## Variable configuration
+## Function
 #
-# gpg valriable
+# loadConf
 #
-p=pgp.nic.ad.jp
+files=(`ls $ZDOTDIR/conf`)
+for file in $files
+do
+    source $ZDOTDIR/conf/$file
+done
 
 ## Include dependence configuration
 #
@@ -15,10 +19,6 @@ for z in $zfile
 do
     source $z
 done
-
-# zprompt
-#
-source $ZDOTDIR/zprompt
 
 ## auto change directory
 #
@@ -52,39 +52,3 @@ setopt hist_ignore_all_dups
 # share command history data
 #
 setopt share_history
-
-## Alias configuration
-#
-# ls
-#
-env=`uname`
-if [ $env = "Darwin" ]
-then
-    alias ls='ls -G'
-fi
-
-alias la='ls -a'
-alias lf='ls -F'
-alias ll='ls -l'
-
-# emacsclient
-#
-alias cl='emacsclient'
-
-# Git
-#
-alias gs='git status'
-alias gi='git init'
-alias ga='git add'
-alias gc='git commit'
-alias gb='git branch'
-alias gch='git checkout'
-
-## Function
-#
-# reload
-#
-function reload() {
-    source $ZDOTDIR/zprofile
-    source $ZDOTDIR/zshrc
-}
