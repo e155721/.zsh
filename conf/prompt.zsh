@@ -20,7 +20,12 @@ P2="
 %(!.#.${default}) %"
 
 function branch_name() {
-    if [ -e .git ]
+    error=~/.zerror
+    git status > $error 2>&1
+    exitStatus=$?
+    rm $error
+    
+    if [ $exitStatus -eq 0 ]
     then
         branch=`git branch | grep \*`
         if [ -z "$branch" ]
