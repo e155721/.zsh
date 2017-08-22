@@ -18,6 +18,7 @@ alias cl='emacsclient'
 
 # Git
 #
+alias g='git'
 alias gs='git status'
 alias gi='git init'
 alias ga='git add'
