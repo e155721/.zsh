@@ -6,9 +6,13 @@
 #
 export LANG=ja_JP.UTF-8
 
+## ZSH path
+#
+export ZDOTDIR=~/.zsh.d
+
 ## Include dependence configuration
 #
-local='.zpf_*'
+local='.zpf_local'
 if [ -e $local ]
 then
     source ~/$local
