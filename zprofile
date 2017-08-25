@@ -1,9 +1,5 @@
 ### zprofile ###
 
-## ZSH path
-#
-export ZDOTDIR=~/.zsh
-
 ## Set language
 #
 # UTF-8
@@ -12,7 +8,7 @@ export LANG=ja_JP.UTF-8
 
 ## Include dependence configuration
 #
-local='.zprofile_local.zsh'
+local='.zpf_*'
 if [ -e $local ]
 then
     source ~/$local
