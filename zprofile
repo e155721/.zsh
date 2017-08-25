@@ -12,7 +12,7 @@ export LANG=ja_JP.UTF-8
 
 ## Include dependence configuration
 #
-local='.zprofile_local'
+local='.zprofile_local.zsh'
 if [ -e $local ]
 then
     source ~/$local
