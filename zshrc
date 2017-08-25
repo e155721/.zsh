@@ -14,7 +14,7 @@ done
 #
 # .zsh_* file.
 #
-zfile=(`ls ~/.zsh_*`)
+zfile=(`ls ~/*\.zsh`)
 for z in $zfile
 do
     source $z
