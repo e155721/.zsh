@@ -9,10 +9,10 @@ function prompt() {
     if [ -n "$prompt" ]
     then
         echo $prompt > $promptFile
-        source ~/.zsh/zshrc
+        source $ZDOTDIR/zshrc
     else
         rm -f $promptFile
-        source ~/.zsh/zshrc
+        source $ZDOTDIR/zshrc
     fi
 }
 
