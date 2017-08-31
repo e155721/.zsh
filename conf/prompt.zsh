@@ -7,7 +7,7 @@
 autoload -U colors && colors
 autoload -Uz add-zsh-hook
 
-promptFile=~/'.zpfile'
+promptFile=~/'.zprompt'
 if [ -e $promptFile ]
 then
     default=`cat $promptFile`
