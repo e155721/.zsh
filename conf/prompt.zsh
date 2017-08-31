@@ -24,15 +24,11 @@ function branch_name() {
     git status > $error 2>&1
     exitStatus=$?
     rm $error
-    
+
     if [ $exitStatus -eq 0 ]
     then
         branch=`git branch | grep \*`
-        if [ -z "$branch" ]
-        then
-            branch='No-Branches'
-        fi
-        PROMPT="${P1}(${branch}) ${P2}"
+        PROMPT="${P1}${branch} ${P2}"
     else
         PROMPT="${P1} ${P2}"
     fi
