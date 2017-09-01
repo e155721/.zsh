@@ -14,8 +14,9 @@ done
 #
 # .zsh_* file.
 #
-zfile=(`ls ~/.zsh_*`)
+zfile=(`ls ~/.zsh_* 2> ~/.error`)
 exitStatus=$?
+rm ~/.error
 if [ $exitStatus -eq 0 ]
 then
     for z in $zfile
