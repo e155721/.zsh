@@ -15,7 +15,8 @@ done
 # .zsh_* file.
 #
 zfile=(`ls ~/.zsh_*`)
-if [ -n "$zfile" ]
+exitStatus=$?
+if [ $exitStatus -eq 0 ]
 then
     for z in $zfile
     do
