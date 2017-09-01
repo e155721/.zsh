@@ -14,11 +14,12 @@ done
 #
 # .zsh_* file.
 #
-zfile=(`ls ~/.zsh_* 2> ~/.error`)
+ls -a $HOME | grep .zsh_ > ~/.zlist
 exitStatus=$?
-rm ~/.error
+rm ~/.zlist
 if [ $exitStatus -eq 0 ]
 then
+    zfile=(`ls ~/.zsh_*`)
     for z in $zfile
     do
         source $z
