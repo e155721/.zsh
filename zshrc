@@ -15,10 +15,13 @@ done
 # .zsh_* file.
 #
 zfile=(`ls ~/.zsh_*`)
-for z in $zfile
-do
-    source $z
-done
+if [ -n "$zfile" ]
+then
+    for z in $zfile
+    do
+        source $z
+    done
+fi
 
 ## auto change directory
 #
