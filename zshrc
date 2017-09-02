@@ -40,8 +40,16 @@ bindkey -e
 
 ## Completion configuration
 #
-autoload -U compinit
+autoload -Uz compinit
 compinit
+
+## Autoload reload
+#
+autoload -Uz reload
+
+## Autoload prompt
+#
+autoload -Uz prompt
 
 ## Command history configuration
 #

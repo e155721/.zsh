@@ -1,0 +1,5 @@
+## reload
+#
+source $ZDOTDIR/zprofile
+source $ZDOTDIR/zshrc
+clear

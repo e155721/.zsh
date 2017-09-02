@@ -6,9 +6,15 @@
 #
 export LANG=ja_JP.UTF-8
 
-## ZSH path
+## Environment variable
+#
+# ZDOTDIR
 #
 export ZDOTDIR=~/.zsh.d
+
+# FPATH
+#
+export FPATH=$FPATH:$ZDOTDIR/function
 
 ## Include dependence configuration
 #
