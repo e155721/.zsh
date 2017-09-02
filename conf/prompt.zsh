@@ -4,7 +4,7 @@
 #
 # Default PROMPT configuration
 #
-autoload -U colors && colors
+autoload -Uz colors && colors
 autoload -Uz add-zsh-hook
 
 promptFile=~/'.zprompt'
@@ -37,4 +37,5 @@ add-zsh-hook precmd branch_name
 
 # SPROMPT Configuration
 #
-SPROMPT="%r is correct? [n,y,a,e]: "
+#SPROMPT="%r is correct? [n,y,a,e]: "
+SPROMPT="それは %r か？[y, n]: "
