@@ -38,4 +38,4 @@ add-zsh-hook precmd branch_name
 # SPROMPT Configuration
 #
 #SPROMPT="%r is correct? [n,y,a,e]: "
-SPROMPT="それは %r か？[y, n]: "
+SPROMPT="それは %r のことか？[y, n]: "
