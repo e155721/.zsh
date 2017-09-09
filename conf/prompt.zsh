@@ -19,21 +19,23 @@ P1="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{
 P2="
 %(!.#.${default}) %"
 
-function branch_name() {
-    error=~/.zerror
-    git status > $error 2>&1
-    exitStatus=$?
-    rm $error
+function echo_branch_name() {
+    ERROR=~/.zerror
+    git status > $ERROR 2>&1
+    exit_status=$?
+    rm $ERROR
 
-    if [ $exitStatus -eq 0 ]
+    if [ $exit_status -eq 0 ]
     then
         branch=`git branch | grep \*`
         PROMPT="${P1}${branch} ${P2}"
     else
         PROMPT="${P1} ${P2}"
     fi
+
+    return 0
 }
-add-zsh-hook precmd branch_name
+add-zsh-hook precmd echo_branch_name
 
 # SPROMPT Configuration
 #
