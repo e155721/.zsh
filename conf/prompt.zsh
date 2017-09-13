@@ -20,7 +20,7 @@ p2="
 %(!.#.${default}) %"
 
 function echo_branch_name() {
-    branch=`git branch 2>$ERROR | grep \*`
+    branch=`git branch 2>>$ERROR | grep \*`
     PROMPT="${P1}${branch} ${P2}"
 
     return 0

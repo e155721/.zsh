@@ -20,7 +20,7 @@ done
 #
 # .zsh_* file.
 #
-ls -a $HOME | grep .zsh_ >$ERROR
+ls -a $HOME | grep .zsh_ >>$ERROR
 exit_status=$?
 if [ $exit_status -eq 0 ]; then
     local _zfile=(`ls ~/.zsh_*`)
