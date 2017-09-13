@@ -16,12 +16,14 @@ export ZDOTDIR=~/.zsh.d
 #
 export FPATH=$FPATH:$ZDOTDIR/function
 
-## Include dependence configuration
+## LOCAL_PROFILE
 #
-if [ -z $LOCAL_PROFILE ]; then
+if [ -z "$LOCAL_PROFILE" ]; then
     readonly LOCAL_PROFILE=~/.zpf_local
 fi
 
+## Include dependence configuration
+#
 if [ -e $LOCAL_PROFILE ]; then
     source $LOCAL_PROFILE
 fi
