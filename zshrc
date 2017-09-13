@@ -4,7 +4,9 @@
 #
 # ERROR
 #
-readonly ERROR=~/.zerror
+if [ -z "$ERROR" ]; then
+    readonly ERROR=~/.zerror
+fi
 
 ## Function
 #
