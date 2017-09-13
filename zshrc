@@ -22,12 +22,11 @@ done
 #
 ls -a $HOME | grep .zsh_ >$ERROR
 exit_status=$?
-if [ $exit_status -eq 0 ]
-then
-    local zfile=(`ls ~/.zsh_*`)
-    for z in $zfile
+if [ $exit_status -eq 0 ]; then
+    local _zfile=(`ls ~/.zsh_*`)
+    for local _z in $_zfile
     do
-        source $z
+        source $_z
     done
 fi
 
