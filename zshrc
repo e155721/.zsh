@@ -1,5 +1,11 @@
 ### zshrc ###
 
+## Variable
+#
+# ERROR
+#
+readonly ERROR=~.zerror
+
 ## Function
 #
 # loadConf
@@ -14,7 +20,7 @@ done
 #
 # .zsh_* file.
 #
-ls -a $HOME | grep .zsh_ > ~/.zlist
+ls -a $HOME | grep .zsh_ >~/.zlist
 exitStatus=$?
 rm ~/.zlist
 if [ $exitStatus -eq 0 ]
