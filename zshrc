@@ -2,10 +2,10 @@
 
 ## Variable
 #
-# ERROR
+# ERROR_FILE
 #
-if [ -z "$ERROR" ]; then
-    readonly ERROR=~/.zerror
+if [ -z "$ERROR_FILE" ]; then
+    readonly ERROR_FILE=~/.zerror
 fi
 
 ## Function
@@ -22,7 +22,7 @@ done
 #
 # .zsh_* file.
 #
-ls -a $HOME | grep .zsh_ >>$ERROR
+ls -a $HOME | grep .zsh_ >>$ERROR_FILE
 exit_status=$?
 if [ $exit_status -eq 0 ]; then
     local _zfile=(`ls ~/.zsh_*`)
