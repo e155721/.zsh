@@ -12,7 +12,7 @@ if [ -e $promptFile ]
 then
     default=`cat $promptFile`
 else
-    default='💕'
+    default='💕 '
 fi
 
 P1="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}"
@@ -20,7 +20,6 @@ P2="
 %(!.#.${default}) %"
 
 function echo_branch_name() {
-    ERROR=~/.zerror
     branch=`git branch 2>$ERROR | grep \*`
     PROMPT="${P1}${branch} ${P2}"
 

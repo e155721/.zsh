@@ -4,7 +4,7 @@
 #
 # ERROR
 #
-readonly ERROR=~.zerror
+readonly ERROR=~/.zerror
 
 ## Function
 #
@@ -20,12 +20,11 @@ done
 #
 # .zsh_* file.
 #
-ls -a $HOME | grep .zsh_ >~/.zlist
-exitStatus=$?
-rm ~/.zlist
-if [ $exitStatus -eq 0 ]
+ls -a $HOME | grep .zsh_ >$ERROR
+exit_status=$?
+if [ $exit_status -eq 0 ]
 then
-    zfile=(`ls ~/.zsh_*`)
+    local zfile=(`ls ~/.zsh_*`)
     for z in $zfile
     do
         source $z
