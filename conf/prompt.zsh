@@ -7,10 +7,13 @@
 autoload -Uz colors && colors
 autoload -Uz add-zsh-hook
 
-prompt_file=~/.zprompt
-if [ -e $prompt_file ]
+if [ -z "$PROMPT_FILE" ]; then
+    readonly PROMPT_FILE=~/.zprompt
+fi
+
+if [ -e $PROMPT_FILE ]
 then
-    default=`cat $promptFile`
+    default=`cat $PROMPT_FILE`
 else
     default='💕 '
 fi
