@@ -21,7 +21,7 @@ p2="
 
 function echo_branch_name() {
     branch=`git branch 2>>$ERROR | grep \*`
-    PROMPT="${P1}${branch} ${P2}"
+    PROMPT="${p1}${branch} ${p2}"
 
     return 0
 }
