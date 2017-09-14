@@ -18,13 +18,10 @@ else
     default='💕 '
 fi
 
-p1="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}"
-p2="
-%(!.#.${default}) %"
-
 function echo_branch_name() {
     branch=`git branch 2>>$ERROR_FILE | grep \*`
-    PROMPT="${p1}${branch} ${p2}"
+    PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}${branch}
+%(!.#.${default}) %"
 
     return 0
 }
