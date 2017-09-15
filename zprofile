@@ -10,7 +10,7 @@ export LANG=ja_JP.UTF-8
 #
 # ZDOTDIR
 #
-export ZDOTDIR=~/.zsh.d
+export ZDOTDIR="$HOME"/.zsh.d
 
 # FPATH
 #
