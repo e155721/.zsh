@@ -18,8 +18,8 @@ export FPATH=$FPATH:$ZDOTDIR/function
 
 ## Include dependence configuration
 #
-autoload -Uz fload
-fload $HOME/.zpf_*
+autoload -Uz loadcf
+loadcf $HOME/.zpf_*
 
 ## ssh configuration
 #
