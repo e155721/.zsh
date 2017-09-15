@@ -1,5 +1,6 @@
 files=$1
 for file in $files/*
 do
+    [ -e "$file" ] || exit
     source "$file"
 done

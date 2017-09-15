@@ -16,17 +16,7 @@ fload "$ZDOTDIR/conf"
 
 ## Include dependence configuration
 #
-# .zsh_* file.
-#
-ls -a $HOME | grep .zsh_ >>$ERROR_FILE
-exit_status=$?
-if [ $exit_status -eq 0 ]; then
-    zfile=(`ls ~/.zsh_*`)
-    for z in $zfile
-    do
-        source $z
-    done
-fi
+fload "$HOME"
 
 ## auto change directory
 #

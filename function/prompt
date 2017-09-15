@@ -1,6 +1,7 @@
 ## prompt
 #
 prompt=$1
+promptFile=~/.zprompt
 if [ -n "$prompt" ]
 then
     echo $prompt > $promptFile
