@@ -8,10 +8,6 @@ export LANG=ja_JP.UTF-8
 
 ## Environment variable
 #
-# ZDOTDIR
-#
-export ZDOTDIR="$HOME"/.zsh.d
-
 # FPATH
 #
 export FPATH=$FPATH:$ZDOTDIR/function
