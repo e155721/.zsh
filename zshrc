@@ -2,9 +2,6 @@
 
 ## Autoload function
 #
-# loadcf
-autoload -Uz loadcf
-
 # reload
 #
 autoload -Uz reload
