@@ -2,8 +2,8 @@
 
 ## Autoload function
 #
-# fload
-autoload -Uz fload
+# loadcf
+autoload -Uz loadcf
 
 # reload
 #
@@ -25,8 +25,8 @@ fi
 #
 # Load global configuration
 #
-fload "$ZDOTDIR"/conf/*
+loadcf "$ZDOTDIR"/conf/*
 
 # Load local configuration
 #
-fload "$HOME"/.zsh_*
+loadcf "$HOME"/.zsh_*
