@@ -5,7 +5,7 @@
 # ERROR_FILE
 #
 if [ -z "$ERROR_FILE" ]; then
-    readonly ERROR_FILE=~/.zerror
+    readonly ERROR_FILE="$HOME/.zerror"
 fi
 
 autoload -Uz fload
