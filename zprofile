@@ -16,12 +16,6 @@ export ZDOTDIR=~/.zsh.d
 #
 export FPATH=$FPATH:$ZDOTDIR/function
 
-## LOCAL_PROFILE
-#
-if [ -z "$LOCAL_PROFILE" ]; then
-    readonly LOCAL_PROFILE="$HOME"/.zpf_*
-fi
-
 ## Include dependence configuration
 #
 autoload -Uz fload
