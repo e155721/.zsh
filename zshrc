@@ -12,11 +12,11 @@ autoload -Uz fload
 
 ## Load configuration file
 #
-fload "$ZDOTDIR/conf/*"
+fload "$ZDOTDIR"/conf/*
 
 ## Include dependence configuration
 #
-fload "$HOME/.zsh_*"
+fload "$HOME"/.zsh_*
 
 ## auto change directory
 #
