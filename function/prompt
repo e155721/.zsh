@@ -10,3 +10,5 @@ else
     rm -f $promptFile
     source $ZDOTDIR/zshrc
 fi
+
+return 0
