@@ -19,14 +19,13 @@ export FPATH=$FPATH:$ZDOTDIR/function
 ## LOCAL_PROFILE
 #
 if [ -z "$LOCAL_PROFILE" ]; then
-    readonly LOCAL_PROFILE=~/.zpf_local
+    readonly LOCAL_PROFILE="$HOME"/.zpf_*
 fi
 
 ## Include dependence configuration
 #
-if [ -e $LOCAL_PROFILE ]; then
-    source $LOCAL_PROFILE
-fi
+autoload -Uz fload
+fload $HOME/.zpf_*
 
 ## ssh configuration
 #
