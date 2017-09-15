@@ -6,12 +6,6 @@
 #
 export LANG=ja_JP.UTF-8
 
-## Environment variable
-#
-# FPATH
-#
-export FPATH=$FPATH:$ZDOTDIR/function
-
 ## Include dependence configuration
 #
 loadcf "$HOME"/.zpf_*
