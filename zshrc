@@ -8,15 +8,11 @@ if [ -z "$ERROR_FILE" ]; then
     readonly ERROR_FILE=~/.zerror
 fi
 
-## Function
+autoload -Uz fload
+
+## Load configuration file
 #
-# loadConf
-#
-files=(`ls $ZDOTDIR/conf`)
-for file in $files
-do
-    source $ZDOTDIR/conf/$file
-done
+fload "$ZDOTDIR/conf"
 
 ## Include dependence configuration
 #
