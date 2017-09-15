@@ -2,4 +2,4 @@
 
 ## Delete $ERROR
 #
-rm -f $ERROR
+rm -f $ERROR_FILE
