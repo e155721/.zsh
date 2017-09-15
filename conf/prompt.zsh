@@ -15,7 +15,7 @@ if [ -e $PROMPT_FILE ]
 then
     default=`cat $PROMPT_FILE`
 else
-    default='💕 '
+    default=$
 fi
 
 function echo_branch_name() {
