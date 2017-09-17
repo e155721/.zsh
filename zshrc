@@ -18,7 +18,7 @@ autoload -Uz loadcf
 #
 # ERROR_FILE
 #
-[ -z "$ERROR_FILE" ] && readonly ERROR=/dev/null
+[ -z "$ERROR" ] && readonly ERROR=/dev/null
 
 ## Load configuration file
 #
