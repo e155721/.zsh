@@ -9,7 +9,7 @@ autoload -Uz add-zsh-hook
 
 [ -z "PROMPT_FILE" ] && readonly PROMPT_FILE=~/.zprompt
 
-if [ -e $PROMPT_FILE ]
+if [ -e "$PROMPT_FILE" ]
 then
     default=`cat $PROMPT_FILE`
 else
