@@ -10,6 +10,10 @@ autoload -Uz reload
 #
 autoload -Uz prompt
 
+# loadcf
+#
+autoload -Uz loadcf
+
 ## Variable
 #
 # ERROR_FILE
