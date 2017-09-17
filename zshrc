@@ -18,9 +18,7 @@ autoload -Uz loadcf
 #
 # ERROR_FILE
 #
-if [ -z "$ERROR_FILE" ]; then
-    readonly ERROR_FILE="$HOME/.zerror"
-fi
+[ -z "$ERROR" ] && readonly ERROR=/dev/null
 
 ## Load configuration file
 #
