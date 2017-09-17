@@ -18,7 +18,7 @@ export LANG=ja_JP.UTF-8
 
 ## Include dependence configuration
 #
-[ -z "$LOCAL_FILE" ] &&  readonly LOCAL_FILE=$HOME/.zpf_local
+[ -z "$LOCAL_FILE" ] && readonly LOCAL_FILE=$HOME/.zpf_local
 
 if [ -e $LOCAL_FILE ]; then
 	source "$LOCAL_FILE"
