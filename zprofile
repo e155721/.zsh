@@ -1,5 +1,15 @@
 ### zprofile ###
 
+## Environment variable
+#
+# ZDOTDIR
+#
+export ZDOTDIR="$HOME"/.zsh.d
+
+# FPATH
+#
+export FPATH=$FPATH:$ZDOTDIR/function
+
 ## Set language
 #
 # UTF-8
