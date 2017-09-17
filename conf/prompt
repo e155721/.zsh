@@ -7,9 +7,7 @@
 autoload -Uz colors && colors
 autoload -Uz add-zsh-hook
 
-if [ -z "$PROMPT_FILE" ]; then
-    readonly PROMPT_FILE=~/.zprompt
-fi
+[ -z "PROMPT_FILE" ] && readonly PROMPT_FILE=~/.zprompt
 
 if [ -e $PROMPT_FILE ]
 then
@@ -19,7 +17,7 @@ else
 fi
 
 function echo_branch_name() {
-    branch=`git branch 2>>$ERROR_FILE | grep \*`
+    branch=`git branch 2>>$ERROR | grep \*`
     PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}${branch}
 %(!.#.${default}) %"
 
