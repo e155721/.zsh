@@ -1,7 +1,7 @@
 ### reload ###
 
-source $ZDOTDIR/zprofile
-source $ZDOTDIR/zshrc
+source "$ZDOTDIR"/zprofile
+source "$ZDOTDIR"/zshrc
 clear
 
 return 0
