@@ -2,11 +2,8 @@
 #
 # ls
 #
-env=`uname`
-if [ $env = "Darwin" ]
-then
-    alias ls='ls -G'
-fi
+env=$(uname)
+[ $env = 'Darwin' ] && alias ls='ls -G'
 
 alias la='ls -a'
 alias lf='ls -F'
