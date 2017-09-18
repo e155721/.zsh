@@ -1,14 +1,14 @@
 ### prompt ###
 
 prompt=$1
-promptFile=~/.zprompt
-if [ -n "$prompt" ]
-then
-    echo $prompt > $promptFile
+prompt_file=$HOME/.zprompt
+
+if [ -n "$prompt" ]; then
+    echo "$prompt" >"$prompt_file"
     source $ZDOTDIR/zshrc
 else
-    rm -f $promptFile
-    source $ZDOTDIR/zshrc
+    rm -f "$prompt_file"
+    source "$ZDOTDIR"/zshrc
 fi
 
 return 0
