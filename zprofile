@@ -1,32 +1,25 @@
 ### zprofile ###
 
+## Environment variable
+#
+# ZDOTDIR
+#
+export ZDOTDIR="$HOME"/.zsh.d
+
+# FPATH
+#
+export FPATH=$FPATH:$ZDOTDIR/function
+
 ## Set language
 #
 # UTF-8
 #
 export LANG=ja_JP.UTF-8
 
-## Environment variable
-#
-# ZDOTDIR
-#
-export ZDOTDIR=~/.zsh.d
-
-# FPATH
-#
-export FPATH=$FPATH:$ZDOTDIR/function
-
-## LOCAL_PROFILE
-#
-if [ -z "$LOCAL_PROFILE" ]; then
-    readonly LOCAL_PROFILE=~/.zpf_local
-fi
-
 ## Include dependence configuration
 #
-if [ -e $LOCAL_PROFILE ]; then
-    source $LOCAL_PROFILE
-fi
+[ -z "$LOCAL_FILE" ] && readonly LOCAL_FILE=$HOME/.zpf_local
+[ -e "$LOCAL_FILE" ] && source "$LOCAL_FILE"
 
 ## ssh configuration
 #
