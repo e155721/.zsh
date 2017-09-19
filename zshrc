@@ -36,5 +36,4 @@ for file in "$HOME"/.zsh_*
 do
     [ -e "$file" ] || exit
     source "$file"
-done
-2>$ERROR
+done 2>$ERROR
