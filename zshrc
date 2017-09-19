@@ -28,4 +28,5 @@ loadcf "$ZDOTDIR"/conf/*
 
 # Load local configuration
 #
-loadcf files="$HOME"/.zsh_*
+files="$HOME"/.zsh_*
+loadcf "$files"
