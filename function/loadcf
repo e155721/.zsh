@@ -1,6 +1,6 @@
 ### loadcf ###
 
-exec 2>$ERROR
+exec 2>"$ERROR"
 for file in "$@"
 do
     [ -e "$file" ] && source "$file"
