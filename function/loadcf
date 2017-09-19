@@ -1,7 +1,7 @@
 ### loadcf ###
 
-files=("$@")
-for file in $files
+
+for file in $@
 do
     [ -n "$file" ] && source "$file"
 done
