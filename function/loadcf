@@ -1,6 +1,6 @@
 ### loadcf ###
 
-files=$1
+files="$1"
 for file in $files
 do
     [ -e "$file" ] && source "$file"
