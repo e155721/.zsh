@@ -32,7 +32,8 @@ done
 
 # Load local configuration
 #
-for file in "$HOME"/.zsh_*
+files="$HOME"/.zsh_*
+for file in "$files"
 do
     [ -e "$file" ] || exit
     source "$file"
