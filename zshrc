@@ -24,9 +24,16 @@ autoload -Uz loadcf
 #
 # Load global configuration
 #
-loadcf "$ZDOTDIR"/conf/*
+for file in "$ZDOTDIR"/conf/*
+do
+    [ -e "$file" ] || exit
+    source "$file"
+done
 
 # Load local configuration
 #
-files="$HOME"/.zsh_*
-loadcf "$files"
+for file in "$HOME"/.zsh_*
+do
+    [ -e "$file" ] || exit
+    source "$file"
+done
