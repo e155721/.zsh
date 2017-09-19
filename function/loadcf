@@ -3,7 +3,7 @@
 
 for file in $@
 do
-    [ -n "$file" ] && source "$file"
+    [ -e "$file" ] && source "$file"
 done
 
 return 0
