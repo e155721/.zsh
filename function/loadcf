@@ -1,10 +1,7 @@
 ### loadcf ###
 
-exec 2>"$ERROR"
-for file in "$@"
+files=$1
+for file in $files
 do
     [ -e "$file" ] && source "$file"
 done
-exec 2>/dev/stderr
-
-return 0
