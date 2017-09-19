@@ -3,8 +3,7 @@
 files=("$@")
 for file in $files
 do
-    [ -e "$file" ] || exit
-    source "$file"
+    [ -n "$file" ] && source "$file"
 done
 
 return 0
