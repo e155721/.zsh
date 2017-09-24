@@ -17,7 +17,7 @@ else
 fi
 
 function echo_branch_name() {
-    branch="$(git branch 2>$ERROR | grep \*)"
+    branch="$(git branch 2>"$ERROR" | grep \*)"
     PROMPT="%{$fg_bold[magenta]%}%B%n%b%{$fg[magenta]%}@%m %{$fg_bold[cyan]%}%B[%~]%b %{$fg[green]%}${branch}
 %(!.#.${default}) %"
 
