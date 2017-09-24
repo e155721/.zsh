@@ -3,7 +3,7 @@
 # ls
 #
 env=$(uname)
-[ $env = 'Darwin' ] && alias ls='ls -G'
+[ "$env" = 'Darwin' ] && alias ls='ls -G'
 
 alias la='ls -a'
 alias lf='ls -F'
