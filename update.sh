@@ -1,6 +1,7 @@
-cd "$HOME"
-readonly file='.zpf_local'
-[ -e "$file" ] && mv -v $file .zprofile_local
-[ -e .zshrc ] && mv - v.zshrc .zsh_local
+readonly PROFILE='.zpf_local'
+readonly CONFIG='.zshrc'
 
+cd "$HOME"
+[ -e "$PROFILE" ] && mv -v $PROFILE .zprofile_local
+[ -e "$CONFIG" ] && mv -v $CONFIG .zsh_local
 hh
