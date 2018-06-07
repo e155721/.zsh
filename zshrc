@@ -14,12 +14,6 @@ autoload -Uz prompt
 #
 autoload -Uz loadcf
 
-## Variable
-#
-# ERROR_FILE
-#
-[ -z "$ERROR" ] && readonly ERROR=/dev/null
-
 ## Load configuration file
 #
 # Load global configuration

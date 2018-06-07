@@ -22,8 +22,8 @@ compinit
 # History data file and data size
 #
 HISTFILE=$HOME/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 
 # Delete is overlap and old command data
 #
